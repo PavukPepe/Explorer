@@ -1,0 +1,14 @@
+C:\Users\serge\source\repos\Exolorer\Exolorer\bin\Debug\net6.0\Exolorer.exe
+C:\Users\serge\source\repos\Exolorer\Exolorer\bin\Debug\net6.0\Exolorer.deps.json
+C:\Users\serge\source\repos\Exolorer\Exolorer\bin\Debug\net6.0\Exolorer.runtimeconfig.json
+C:\Users\serge\source\repos\Exolorer\Exolorer\bin\Debug\net6.0\Exolorer.dll
+C:\Users\serge\source\repos\Exolorer\Exolorer\bin\Debug\net6.0\Exolorer.pdb
+C:\Users\serge\source\repos\Exolorer\Exolorer\obj\Debug\net6.0\Exolorer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serge\source\repos\Exolorer\Exolorer\obj\Debug\net6.0\Exolorer.AssemblyInfoInputs.cache
+C:\Users\serge\source\repos\Exolorer\Exolorer\obj\Debug\net6.0\Exolorer.AssemblyInfo.cs
+C:\Users\serge\source\repos\Exolorer\Exolorer\obj\Debug\net6.0\Exolorer.csproj.CoreCompileInputs.cache
+C:\Users\serge\source\repos\Exolorer\Exolorer\obj\Debug\net6.0\Exolorer.dll
+C:\Users\serge\source\repos\Exolorer\Exolorer\obj\Debug\net6.0\refint\Exolorer.dll
+C:\Users\serge\source\repos\Exolorer\Exolorer\obj\Debug\net6.0\Exolorer.pdb
+C:\Users\serge\source\repos\Exolorer\Exolorer\obj\Debug\net6.0\Exolorer.genruntimeconfig.cache
+C:\Users\serge\source\repos\Exolorer\Exolorer\obj\Debug\net6.0\ref\Exolorer.dll
