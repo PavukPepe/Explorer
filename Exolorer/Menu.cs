@@ -38,8 +38,12 @@ namespace Exolorer
                     pos--;
                 else if (key.Key == ConsoleKey.Escape)
                     return -1;
+                else if (key.Key == ConsoleKey.F1)
+                    return -2;
+                else if (key.Key == ConsoleKey.Delete)
+                    return 1000 + pos;
             } while (key.Key != ConsoleKey.Enter);
-            return pos;
+            return pos - minp;
         }
     }
 }

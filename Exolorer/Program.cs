@@ -7,6 +7,7 @@
             var a = new Explorer();
             while (true)
             {
+               /* a.Papka(a.Disks());*/
                 try
                 {
                     a.Papka(a.Disks());
