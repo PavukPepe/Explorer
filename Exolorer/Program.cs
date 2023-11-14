@@ -4,11 +4,10 @@
     {
         static void Main(string[] args)
         {
-            var a = new Explorer();
             while (true)
             {
-               /* a.Papka(a.Disks());*/
-                try
+                Explorer.Papka(Explorer.Disks());
+                /*try
                 {
                     a.Papka(a.Disks());
                 }
@@ -23,7 +22,7 @@
                 {
                     Console.Clear();
                     continue;
-                }
+                }*/
             }
 
         }

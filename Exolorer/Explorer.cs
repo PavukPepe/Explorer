@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Runtime.Intrinsics.Arm;
 
 namespace Exolorer
 {
-    internal class Explorer
+    public static class Explorer
     {
-        public string Disks()
+        public static string Disks()
         {
             Console.Clear();
             Console.WriteLine("Enter - переход к содержимому");
@@ -24,26 +25,12 @@ namespace Exolorer
                 Console.WriteLine(Math.Round((double)(d.TotalFreeSpace / 1073741824) / (d.TotalSize / 1073741824) * 100, 2) + "%");
                 cl++;
             }
-            var a = new Menu(2, driveInfos.Length - 1 );
-            int i = a.Show();
+            int i = Menu.Show(2, driveInfos.Length - 1);
             Console.Clear();
             return driveInfos[i].Name;
         }
 
-        void Del(string dop)
-        {
-            if (dop.Split(".").Length > 1)
-            {
-                File.Delete(dop);
-            }
-            else
-            {
-                Directory.Delete(dop, true);
-            }
-            
-        }
-
-        public void Papka(string path)
+        public static void Papka(string path)
         {
             Console.Clear();
             Console.WriteLine("Enter - переход к содержимому, F1 - добавить паку/файл в этой директории, Del - удалить выбранную директорию");
@@ -60,42 +47,37 @@ namespace Exolorer
                 cl ++;
             }
                 
-            var h = new Menu(2,sod.Length - 1);
-            int i = h.Show();
+            var i = Menu.Show(2, sod.Length - 1);
+/*            int i = h.Show();*/
             Console.Clear();
             if (i == -1)
             {
-                return;
-            }
-            if (i == -2)
-            {
-                Console.Clear();
-                Console.WriteLine("Введите имя желаймого для создания объекта");
-                string g = Console.ReadLine();
-                if (g.Split(".").Length > 1)
+                try
                 {
-                    File.Create(path + "\\" + g);
+                    Papka(Directory.GetParent(path).Name);
                 }
-                else
+                catch
                 {
-                    Directory.CreateDirectory(path + "\\" + g);
+                    return;
                 }
-                Papka(path);
             }
-            if (i > 1000)
+            else if (i == -2)
             {
-                Del(sod[i - 1000]);
-                Papka(path);
+                Update.Addition(path);
             }
 
-            if (a.Contains(sod[i]))
+            else if (a.Length >= i && a.Contains(sod[i]))
             {
                 Papka(sod[i]);
             }
-            else if (b.Contains(sod[i]))
+            else if (b.Length >= i && b.Contains(sod[i]))
             {
                 Process.Start(new ProcessStartInfo { FileName = sod[i], UseShellExecute = true });
                 return;
+            }
+            else if (i > 1000)
+            {
+                Update.Del(sod, a, i, path);
             }
         }
     }

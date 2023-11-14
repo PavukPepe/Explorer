@@ -6,18 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exolorer
 {
-    internal class Menu
+    static class Menu
     {
-        private int minp;
-        private int maxp;
-
-        public Menu(int min, int max)
-        {
-            minp = min;
-            maxp = max;
-        }
-
-        public int Show()
+        public static int Show(int minp, int maxp)
         {
             int pos = minp;
             ConsoleKeyInfo key;
