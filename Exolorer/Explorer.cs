@@ -24,7 +24,7 @@ namespace Exolorer
                 Console.WriteLine(Math.Round((double)(d.TotalFreeSpace / 1073741824) / (d.TotalSize / 1073741824) * 100, 2) + "%");
                 cl++;
             }
-            var a = new Menu(2, cl-1);
+            var a = new Menu(2, driveInfos.Length - 1 );
             int i = a.Show();
             Console.Clear();
             return driveInfos[i].Name;
@@ -60,7 +60,7 @@ namespace Exolorer
                 cl ++;
             }
                 
-            var h = new Menu(2, a.Length + b.Length-1);
+            var h = new Menu(2,sod.Length - 1);
             int i = h.Show();
             Console.Clear();
             if (i == -1)

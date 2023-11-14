@@ -32,7 +32,7 @@ namespace Exolorer
                 Console.SetCursorPosition(0, pos);
                 Console.WriteLine("  ");
 
-                if (key.Key == ConsoleKey.DownArrow && pos != maxp)
+                if (key.Key == ConsoleKey.DownArrow && pos != maxp + minp)
                     pos++;
                 else if (key.Key == ConsoleKey.UpArrow && pos != minp)
                     pos--;
@@ -41,7 +41,7 @@ namespace Exolorer
                 else if (key.Key == ConsoleKey.F1)
                     return -2;
                 else if (key.Key == ConsoleKey.Delete)
-                    return 1000 + pos;
+                    return 1000 + pos - minp;
             } while (key.Key != ConsoleKey.Enter);
             return pos - minp;
         }
